@@ -15,6 +15,7 @@ const students = [
 
 function getNames(students) {
   // your code here
+  return students.map((student) => student.name);
 }
 
 // ----- Checks (do not edit) -----

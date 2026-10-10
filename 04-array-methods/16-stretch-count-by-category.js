@@ -7,17 +7,33 @@
 //
 // The checks at the bottom print ✅ when your function is correct.
 
-const menu = [
-  { name: "Shawarma", price: 600, category: "food" },
-  { name: "Karak", price: 150, category: "drink" },
-  { name: "Mandi", price: 2500, category: "food" },
-  { name: "Fresh juice", price: 800, category: "drink" },
-  { name: "Luqaimat", price: 1000, category: "dessert" },
-];
+{
+  const menu = [
+    { name: "Shawarma", price: 600, category: "food" },
+    { name: "Karak", price: 150, category: "drink" },
+    { name: "Mandi", price: 2500, category: "food" },
+    { name: "Fresh juice", price: 800, category: "drink" },
+    { name: "Luqaimat", price: 1000, category: "dessert" },
+  ];
 
-function countByCategory(menu) {
-  // your code here
+  function countByCategory(menu) {
+    const counts = {};
+
+    menu.forEach((item) => {
+      if (counts[item.category] === undefined) {
+        counts[item.category] = 1;
+      } else {
+        counts[item.category]++;
+      }
+    });
+
+    return counts;
+  }
+
+  // ----- Checks (do not edit) -----
+  check("countByCategory(menu)", () => countByCategory(menu), {
+    food: 2,
+    drink: 2,
+    dessert: 1
+  });
 }
-
-// ----- Checks (do not edit) -----
-check("countByCategory(menu)", () => countByCategory(menu), { food: 2, drink: 2, dessert: 1 });

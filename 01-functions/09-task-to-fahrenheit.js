@@ -7,7 +7,9 @@
 
 function toFahrenheit(celsius) {
   // your code here
+  return celsius * 9 / 5 + 32;
 }
+
 
 // ----- Checks (do not edit) -----
 check("toFahrenheit(0)", () => toFahrenheit(0), 32);

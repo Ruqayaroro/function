@@ -7,18 +7,21 @@
 //
 // The checks at the bottom print ✅ when your function is correct.
 
-const menu = [
-  { name: "Shawarma", price: 600, category: "food" },
-  { name: "Karak", price: 150, category: "drink" },
-  { name: "Mandi", price: 2500, category: "food" },
-  { name: "Fresh juice", price: 800, category: "drink" },
-  { name: "Luqaimat", price: 1000, category: "dessert" },
-];
+{
+  const menu = [
+    { name: "Shawarma", price: 600, category: "food" },
+    { name: "Karak", price: 150, category: "drink" },
+    { name: "Mandi", price: 2500, category: "food" },
+    { name: "Fresh juice", price: 800, category: "drink" },
+    { name: "Luqaimat", price: 1000, category: "dessert" },
+  ];
 
-function sortByPrice(menu) {
-  // your code here
+  function sortByPrice(menu) {
+    return [...menu].sort((a, b) => a.price - b.price);
+  }
+
+  // ----- Checks (do not edit) -----
+  check("sortByPrice(menu).map((item) => item.name)", () => sortByPrice(menu).map((item) => item.name), ["Karak", "Shawarma", "Fresh juice", "Luqaimat", "Mandi"]);
+
+  check("(sortByPrice(menu), menu[0].name)", () => (sortByPrice(menu), menu[0].name), "Shawarma");
 }
-
-// ----- Checks (do not edit) -----
-check("sortByPrice(menu).map((item) => item.name)", () => sortByPrice(menu).map((item) => item.name), ["Karak", "Shawarma", "Fresh juice", "Luqaimat", "Mandi"]);
-check("(sortByPrice(menu), menu[0].name)", () => (sortByPrice(menu), menu[0].name), "Shawarma");

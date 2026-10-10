@@ -16,6 +16,7 @@ const menu = [
 
 function getByCategory(menu, category) {
   // your code here
+  return menu.filter((item) => item.category === category);
 }
 
 // ----- Checks (do not edit) -----

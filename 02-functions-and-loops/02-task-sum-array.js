@@ -8,7 +8,16 @@
 
 function sumArray(numbers) {
   // your code here
+
+  let sum = 0;
+
+  for (let i = 0; i < numbers.length; i++) {
+    sum = sum + numbers[i];
+  }
+
+  return sum;
 }
+
 
 // ----- Checks (do not edit) -----
 check("sumArray([1, 2, 3])", () => sumArray([1, 2, 3]), 6);

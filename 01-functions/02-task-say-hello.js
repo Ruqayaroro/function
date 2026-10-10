@@ -7,9 +7,13 @@
 // The checks at the bottom print ✅ when your function is correct.
 
 function sayHello(name) {
-  // your code here
+ 
+  // your code here return 
+return `Hello, ${name}!`;
 }
 
 // ----- Checks (do not edit) -----
 check("sayHello(\"Fatma\")", () => sayHello("Fatma"), "Hello, Fatma!");
 check("sayHello(\"Khalid\")", () => sayHello("Khalid"), "Hello, Khalid!");
+
+

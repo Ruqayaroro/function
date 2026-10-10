@@ -8,6 +8,7 @@
 
 function pricesToOMR(prices) {
   // your code here
+  return prices.map((price) => price / 1000);
 }
 
 // ----- Checks (do not edit) -----

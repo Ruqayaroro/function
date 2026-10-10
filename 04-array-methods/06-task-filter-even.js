@@ -8,6 +8,8 @@
 
 function onlyEven(numbers) {
   // your code here
+
+  return numbers.filter((n) => n % 2 === 0);
 }
 
 // ----- Checks (do not edit) -----

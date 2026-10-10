@@ -8,7 +8,17 @@
 
 function countPassed(scores, passMark) {
   // your code here
+  let count = 0;
+
+  for (let i = 0; i < scores.length; i++) {
+    if (scores[i] >= passMark) {
+      count++;
+    }
+  }
+
+  return count;
 }
+
 
 // ----- Checks (do not edit) -----
 check("countPassed([78, 45, 92, 60], 60)", () => countPassed([78, 45, 92, 60], 60), 3);

@@ -6,16 +6,25 @@
 //
 // The checks at the bottom print ✅ when your function is correct.
 
-const students = [
-  { name: "Ahmed", score: 87 },
-  { name: "Fatma", score: 95 },
-  { name: "Khalid", score: 58 },
-  { name: "Maryam", score: 72 },
-];
+{
+  const students = [
+    { name: "Ahmed", score: 87 },
+    { name: "Fatma", score: 95 },
+    { name: "Khalid", score: 58 },
+    { name: "Maryam", score: 72 },
+  ];
 
-function passedStudents(students) {
-  // your code here
+  function passedStudents(students) {
+    return students.filter((student) => student.score >= 60);
+  }
+
+  check(
+    "passedStudents(students)",
+    () => passedStudents(students),
+    [
+      { name: "Ahmed", score: 87 },
+      { name: "Fatma", score: 95 },
+      { name: "Maryam", score: 72 }
+    ]
+  );
 }
-
-// ----- Checks (do not edit) -----
-check("passedStudents(students)", () => passedStudents(students), [{ name: "Ahmed", score: 87 }, { name: "Fatma", score: 95 }, { name: "Maryam", score: 72 }]);

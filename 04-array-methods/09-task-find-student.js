@@ -7,17 +7,23 @@
 //
 // The checks at the bottom print ✅ when your function is correct.
 
-const students = [
-  { name: "Ahmed", score: 87 },
-  { name: "Fatma", score: 95 },
-  { name: "Khalid", score: 58 },
-  { name: "Maryam", score: 72 },
-];
+{
+  const students = [
+    { name: "Ahmed", score: 87 },
+    { name: "Fatma", score: 95 },
+    { name: "Khalid", score: 58 },
+    { name: "Maryam", score: 72 },
+  ];
 
-function findStudent(students, name) {
-  // your code here
+  function findStudent(students, name) {
+    return students.find((student) => student.name === name);
+  }
+
+  check("findStudent(students, \"Khalid\")",
+    () => findStudent(students, "Khalid"),
+    { name: "Khalid", score: 58 });
+
+  check("findStudent(students, \"Aisha\")",
+    () => findStudent(students, "Aisha"),
+    undefined);
 }
-
-// ----- Checks (do not edit) -----
-check("findStudent(students, \"Khalid\")", () => findStudent(students, "Khalid"), { name: "Khalid", score: 58 });
-check("findStudent(students, \"Aisha\")", () => findStudent(students, "Aisha"), undefined);

@@ -10,12 +10,13 @@
 // The checks at the bottom print ✅ when your function is correct.
 
 // your code here
-
+const square = (n) => n * n;
 // your code here
-
+const toBaisa = (omr) => omr * 1000;
 // your code here
-
+const welcome = (city) => `Welcome to ${city}!`;
 // your code here
+const isHot = (temp) => temp >= 40;
 
 // ----- Checks (do not edit) -----
 check("square(6)", () => square(6), 36);

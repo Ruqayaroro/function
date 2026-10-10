@@ -8,6 +8,7 @@
 
 function hasCity(cities, city) {
   // your code here
+  return cities.includes(city);
 }
 
 // ----- Checks (do not edit) -----

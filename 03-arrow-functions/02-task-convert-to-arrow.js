@@ -12,11 +12,11 @@
 // The checks at the bottom print ✅ when your function is correct.
 
 // your code here
-
+const triple = (n) => n * 3;
 // your code here
-
+const isPositive = (n) => n > 0;
 // your code here
-
+const fullName = (first, last) => `${first} ${last}`;
 // ----- Checks (do not edit) -----
 check("triple(4)", () => triple(4), 12);
 check("isPositive(5)", () => isPositive(5), true);

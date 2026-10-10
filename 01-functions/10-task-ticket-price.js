@@ -10,7 +10,16 @@
 
 function ticketPrice(age, isStudent) {
   // your code here
+
+  if (age < 6) {
+    return 0;
+  } else if (age >= 60 || isStudent) {
+    return 1;
+  } else {
+    return 2;
+  }
 }
+
 
 // ----- Checks (do not edit) -----
 check("ticketPrice(4, false)", () => ticketPrice(4, false), 0);

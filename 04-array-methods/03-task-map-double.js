@@ -8,6 +8,7 @@
 
 function doubleAll(numbers) {
   // your code here
+  return numbers.map((n) => n * 2);
 }
 
 // ----- Checks (do not edit) -----

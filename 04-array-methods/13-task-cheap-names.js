@@ -7,18 +7,26 @@
 //
 // The checks at the bottom print ✅ when your function is correct.
 
-const menu = [
-  { name: "Shawarma", price: 600, category: "food" },
-  { name: "Karak", price: 150, category: "drink" },
-  { name: "Mandi", price: 2500, category: "food" },
-  { name: "Fresh juice", price: 800, category: "drink" },
-  { name: "Luqaimat", price: 1000, category: "dessert" },
-];
+{
+  const menu = [
+    { name: "Shawarma", price: 600, category: "food" },
+    { name: "Karak", price: 150, category: "drink" },
+    { name: "Mandi", price: 2500, category: "food" },
+    { name: "Fresh juice", price: 800, category: "drink" },
+    { name: "Luqaimat", price: 1000, category: "dessert" },
+  ];
 
-function cheapNames(menu, maxPrice) {
-  // your code here
+  function cheapNames(menu, maxPrice) {
+    return menu
+      .filter((item) => item.price <= maxPrice)
+      .map((item) => item.name);
+  }
+
+  check("cheapNames(menu, 800)",
+    () => cheapNames(menu, 800),
+    ["Shawarma", "Karak", "Fresh juice"]);
+
+  check("cheapNames(menu, 100)",
+    () => cheapNames(menu, 100),
+    []);
 }
-
-// ----- Checks (do not edit) -----
-check("cheapNames(menu, 800)", () => cheapNames(menu, 800), ["Shawarma", "Karak", "Fresh juice"]);
-check("cheapNames(menu, 100)", () => cheapNames(menu, 100), []);

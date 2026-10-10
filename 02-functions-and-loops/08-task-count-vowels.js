@@ -9,7 +9,17 @@
 
 function countVowels(text) {
   // your code here
+  let count = 0;
+
+  for (let letter of text) {
+    if ("aeiou".includes(letter)) {
+      count++;
+    }
+  }
+
+  return count;
 }
+
 
 // ----- Checks (do not edit) -----
 check("countVowels(\"muscat\")", () => countVowels("muscat"), 2);
